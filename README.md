@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+## App Details
+
+App Title: TBA
+
+The purpose of this app is to work as a sort of dictionary for all of the exercises out there.
+
+Users will be able to filter through them by categories such as muscle groups.
+
+Exercises will have a full description and visual representation.
+
+Users will be able to make their own routines, with its own alarms and such.
+
+The app will keep track of analytics such as how much you've worked X muscle or
+have done Y exercise in the past 30 days (for example).
