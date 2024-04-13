@@ -1,9 +1,9 @@
-<div class="text-white text-center italic font-bold text-2xl my-6">Fitness App</div>
+<!-- <div class="text-white text-center italic font-bold text-2xl my-6">Fitness App</div>
     
 <div class="grid grid-cols-2 border-t-2 border-green-500">
   <div class="cols-span-1 m-6 text-white italic font-bold text-lg flex justify-center items-center">{{ dateTime | date }}</div>
   <div class="cols-span-1 text-white flex justify-center items-center">
-    <!-- <img class="h-10 w-10 rounded-full" src="" alt=""/> -->
+    <img class="h-10 w-10 rounded-full" src="" alt=""/>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
       <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
     </svg>    
@@ -71,6 +71,59 @@
   <div class="bg-gradient-to-r from-red-800 to-red-950 border-2 border-green-500 rounded-full mx-16 p-1 hover:bg-green-500 active:scale-90">
     <div class="text-white text-center text-xl">Routines</div>
   </div>
+</div> -->
+
+
+
+<!-- Testing adding new exercises and working with filters -->
+
+<form class="row mt-3 gx-3 gy-2 align-items-center justify-content-center">
+  <div class="col-sm-6 border-2 border-gray-500">
+    <label class="visually-hidden" for="specificSizeInputName">Wish</label>
+    <input type="text" name="new-exercise-name" class="form-control" [(ngModel)]="newExerciseName">
+  </div>
+  <div class="col-auto border-2 border-red-400">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="$event.preventDefault(); addNewExercise()"
+      >Add Exercise</button>
+  </div>
+</form>
+
+<div class="row mt-3">
+  <div class="col-sm-2 border-2 border-gray-500">
+    <select
+      class="form-select"
+      [(ngModel)]="listFilter"
+    >
+      <option value="0">All</option>
+      <option value="1">Non-Custom</option>
+      <option value="2">Custom</option>
+    </select>
+  </div>
 </div>
+
+<div class="row mt-3">
+  <div *ngIf="visibleItems.length == 0; else showExercises">
+    No exercises to display.
+  </div>
   
-<!-- Today's Routine | Exercise Catalogue | Muscles View | Routines -->
+  <ng-template #showExercises>
+    <ul class="exercise-list">
+      <li *ngFor="let item of visibleItems; index as ii">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input
+              class="checkbox"
+              type="checkbox"
+              [checked]="item.isCustom"
+              [attr.data-index]="ii"
+              (click)="toggleItem(item)"
+            > {{ item.exerciseName}}
+          </label>
+        </div>  
+      </li>
+    </ul>
+  </ng-template>
+</div>
