@@ -1,11 +1,7 @@
-<!-- <div class="bg-blue-300">
-  <h1 class="text-4xl">Hello Tailwind CSS Angular</h1>
-</div> -->
-
 <div class="text-white text-center italic font-bold text-2xl my-6">Fitness App</div>
     
-<div class="grid grid-cols-2">
-  <div class="cols-span-1 m-6 text-white italic font-bold text-lg flex justify-center items-center">4 / 11 / 2024</div>
+<div class="grid grid-cols-2 border-t-2 border-green-500">
+  <div class="cols-span-1 m-6 text-white italic font-bold text-lg flex justify-center items-center">{{ dateTime | date }}</div>
   <div class="cols-span-1 text-white flex justify-center items-center">
     <!-- <img class="h-10 w-10 rounded-full" src="" alt=""/> -->
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
@@ -16,63 +12,63 @@
 
 <div class="m-2 text-white font-bold text-lg">Summary</div>
 
-<div class="bg-indigo-950 rounded-2xl text-white p-4 pl-2">
+<div class="bg-gradient-to-br from-red-800 to-red-950 rounded-2xl text-white p-4 pl-2 border-2 border-green-500">
 
   <div class="grid grid-cols-4 my-2 gap-10">
     <div class="col-span-2 grid grid-cols-3">
-      <div class="col-span-2 text-sm text-right flex justify-center items-center">Cal Intake:</div>
-      <div class="col-span-1 text-md flex justify-center items-center">123cal</div>
+      <div class="col-span-2 text-right flex justify-center items-center">Cal Intake:</div>
+      <div class="col-span-1 flex justify-center items-center">123cal</div>
     </div>
     <div class="col-span-2 grid grid-cols-3">
-      <div class="col-span-2 text-sm text-right flex justify-center items-center">Cals Burned:</div>
-      <div class="col-span-1 text-md flex justify-center items-center">123cal</div>
+      <div class="col-span-2 text-right flex justify-center items-center">Cals Burned:</div>
+      <div class="col-span-1 flex justify-center items-center">123cal</div>
     </div>
   </div>
 
   <div class="grid grid-cols-4 my-2 gap-10">
     <div class="col-span-2 grid grid-cols-3">
-      <div class="col-span-2 text-sm text-right flex justify-center items-center">Weight:</div>
-      <div class="col-span-1 text-md leading-8">140lbs</div>
+      <div class="col-span-2 text-right flex justify-center items-center">Weight:</div>
+      <div class="col-span-1 leading-8">140lbs</div>
     </div>
     <div class="col-span-2 grid grid-cols-3">
-      <div class="col-span-2 text-sm text-right flex justify-center items-center">Weight Goal:</div>
-      <div class="col-span-1 text-md flex justify-center items-center">130lbs</div>
+      <div class="col-span-2 text-right flex justify-center items-center">Weight Goal:</div>
+      <div class="col-span-1 flex justify-center items-center">130lbs</div>
     </div>
   </div>
 
   <div class="grid grid-cols-4 my-2 gap-10">
     <div class="col-span-2 grid grid-cols-3">
-      <div class="col-span-2 text-sm text-right flex justify-center items-center">Height:</div>
-      <div class="col-span-1 text-md flex justify-center items-center">5'5ft</div>
+      <div class="col-span-2 text-right flex justify-center items-center">Height:</div>
+      <div class="col-span-1 flex justify-center items-center">5'5ft</div>
     </div>
     <div class="col-span-2 grid grid-cols-3 gap-2">
-      <div class="col-span-2 text-sm text-right flex justify-center items-center"></div>
-      <div class="col-span-1 text-md flex justify-center items-center"></div>
+      <div class="col-span-2 text-right flex justify-center items-center"></div>
+      <div class="col-span-1 flex justify-center items-center"></div>
     </div>
   </div>
 
   <div class="text-white text-sm flex justify-end mt-8">
-    <div class="bg-indigo-800 rounded-full px-4 py-1 active:bg-green-500">Edit</div>
+    <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:bg-green-500 active:scale-90">Edit</div>
   </div>
 
 </div>
 
 
 
-<div class="grid gap-10 mt-10">
-  <div class="bg-indigo-950 rounded-full mx-16 p-1 active:bg-green-500 active:scale-90">
+<div class="grid gap-10 mt-10 border-x-2 border-green-500 rounded-3xl p-2">
+  <div class="bg-gradient-to-r from-red-700 to-red-950 border-2 border-green-500 rounded-full mx-16 p-1 hover:bg-green-500 active:scale-90">
     <div class="text-white text-center text-xl">Today's Workout</div>
   </div>
 
-  <div class="bg-indigo-950 rounded-full mx-16 p-1 active:bg-green-500 active:scale-90">
+  <div class="bg-gradient-to-r from-red-600 to-red-950 border-2 border-green-500 rounded-full mx-16 p-1 hover:bg-green-500 active:scale-90">
     <div class="text-white text-center text-xl">Exercises Catalogue</div>
   </div>
 
-  <div class="bg-indigo-950 rounded-full mx-16 p-1 active:bg-green-500 active:scale-90">
+  <div class="bg-gradient-to-r from-red-800 to-red-950 border-2 border-green-500 rounded-full mx-16 p-1 hover:bg-green-500 active:scale-90">
     <div class="text-white text-center text-xl">Muscle Group View</div>
   </div>
 
-  <div class="bg-indigo-950 rounded-full mx-16 p-1 active:bg-green-500 active:scale-90">
+  <div class="bg-gradient-to-r from-red-800 to-red-950 border-2 border-green-500 rounded-full mx-16 p-1 hover:bg-green-500 active:scale-90">
     <div class="text-white text-center text-xl">Routines</div>
   </div>
 </div>
