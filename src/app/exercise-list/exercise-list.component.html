@@ -1,0 +1,21 @@
+<div *ngIf="exercises.length == 0; else showExercises">
+    No exercises to display.
+  </div>
+  
+  <ng-template #showExercises>
+    <ul class="exercise-list">
+      <li *ngFor="let item of exercises; index as ii">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input
+              class="checkbox"
+              type="checkbox"
+              [checked]="item.isCustom"
+              [attr.data-index]="ii"
+              (click)="toggleItem(item)"
+            > {{item.exerciseName}}
+          </label>
+        </div>  
+      </li>
+    </ul>
+  </ng-template>

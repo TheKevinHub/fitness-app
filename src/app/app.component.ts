@@ -4,17 +4,14 @@ import { RouterOutlet } from '@angular/router';
 import { timer } from 'rxjs';
 import { ExerciseItem } from '../shared/models/exerciseItem';
 import { FormsModule } from '@angular/forms';
-
-const filters = [
-  (item : ExerciseItem) => item,
-  (item : ExerciseItem) => !item.isCustom,
-  (item : ExerciseItem) => item.isCustom,
-];
+import { ExerciseListComponent } from './exercise-list/exercise-list.component';
+import { AddExerciseFormComponent } from './add-exercise-form/add-exercise-form.component';
+import { ExerciseFilterComponent } from './exercise-filter/exercise-filter.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule],
+  imports: [RouterOutlet, CommonModule, FormsModule, ExerciseListComponent, AddExerciseFormComponent, ExerciseFilterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -40,23 +37,7 @@ export class AppComponent implements OnInit {
     new ExerciseItem('Chin Up', true)
   ];
 
-  listFilter : any = '0';
-
-  newExerciseName = '';
-
-  get visibleItems() : ExerciseItem[] {
-    return this.items.filter(filters[this.listFilter])
-  }
-
-  addNewExercise() {
-    this.items.push(new ExerciseItem(this.newExerciseName, true))
-    this.newExerciseName = '';
-  }
-
-  toggleItem(item : ExerciseItem) {
-    item.isCustom = !item.isCustom;
-  }
-
+  filter: any = () => {};
 }
 
 
