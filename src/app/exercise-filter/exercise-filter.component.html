@@ -1,8 +1,8 @@
-<div class="col-sm-2 border-2 border-gray-500">
+<div class="relative mt-2 rounded-md shadow-sm outline-0">
     <select
-      class="form-select"
+      class="outline-0 rounded-md input:focus-rounded-full"
       [(ngModel)]="listFilter"
-      (ngModelChange)="changeFilter($event)"
+      (ngModelChange)="updateFilter($event)"
     >
       <option value="0">All</option>
       <option value="1">Non-Custom</option>

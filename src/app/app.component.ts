@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { AddExerciseFormComponent } from './add-exercise-form/add-exercise-form.component';
 import { ExerciseFilterComponent } from './exercise-filter/exercise-filter.component';
+import events from './../shared/services/EventService';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ import { ExerciseFilterComponent } from './exercise-filter/exercise-filter.compo
 export class AppComponent implements OnInit {
   title = 'fitness-app';
 
-  dateTime: Date
+  dateTime!: Date
 
   ngOnInit() {
     timer(0, 1000).subscribe(() => {
@@ -37,7 +38,14 @@ export class AppComponent implements OnInit {
     new ExerciseItem('Chin Up', true)
   ];
 
-  filter: any = () => {};
+  constructor() {
+    events.listen('removeExercise', (exercise : any) => {
+      // todo remove exercise from items
+      console.log(exercise);
+    })
+  }
+
+  filter: any;
 }
 
 

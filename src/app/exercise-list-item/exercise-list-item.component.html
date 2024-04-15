@@ -1,0 +1,15 @@
+<li class="grid grid-cols-4">
+    <div class="form-check col-span-1">
+        <label class="form-check-label" [ngClass]="cssClasses">
+            <input
+            class="checkbox"
+            type="checkbox"
+            [checked]="isCustom"
+            (click)="toggleCustom()"
+            > {{exerciseName}}
+        </label>
+    </div>
+    <div class="cols-span-3">
+        <button type="button" class="border-2 p-1 rounded-full px-2 bg-red-800 text-xs hover:scale-90 active:scale-100" (click)="removeExercise()">x</button>
+    </div>
+</li>

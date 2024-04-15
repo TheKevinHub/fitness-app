@@ -48,7 +48,7 @@
   </div>
 
   <div class="text-white text-sm flex justify-end mt-8">
-    <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:bg-green-500 active:scale-90">Edit</div>
+    <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:scale-90">Edit</div>
   </div>
 
 </div>
@@ -83,7 +83,7 @@
 
 <div class="row mt-3">
   <exercise-filter
-    (filter)="filter = $event"
+    [(filter)]="filter"
   ></exercise-filter>
 </div>
 
@@ -91,4 +91,4 @@
   <exercise-list
     [exercises]="items.filter(filter)"
   ></exercise-list>
-</div>
+</div>  
