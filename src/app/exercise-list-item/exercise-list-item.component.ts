@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ExerciseItem } from '../../shared/models/exerciseItem';
 import { CommonModule } from '@angular/common';
-import events from './../../shared/services/EventService';
+import { EventService } from './../../shared/services/EventService';
 
 @Component({
   selector: 'exercise-list-item',
@@ -11,25 +11,21 @@ import events from './../../shared/services/EventService';
   styleUrl: './exercise-list-item.component.css'
 })
 export class ExerciseListItemComponent {
-  @Input() exerciseName! : string;
-
-  @Input() isCustom! : boolean;
-  @Output() isCustomChange = new EventEmitter<boolean>();
+  @Input() exercise! : ExerciseItem;
 
   get cssClasses() {
     // return this.isCustom ? ['custom', 'text-red-500'] : [''];
-    return {'custom text-red-500': this.isCustom};
+    return {'custom text-red-500': this.exercise.isCustom};
   }
 
-  constructor() { }
+  constructor(private events: EventService) { }
 
   removeExercise() {
-    events.emit('removeExercise', this.exerciseName);
+    this.events.emit('removeExercise', this.exercise);
   }
 
   toggleCustom() {
-    this.isCustom = !this.isCustom;
-    this.isCustomChange.emit(this.isCustom);
+    this.exercise.isCustom = !this.exercise.isCustom;
   }
 
 }

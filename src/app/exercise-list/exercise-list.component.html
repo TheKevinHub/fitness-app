@@ -6,8 +6,7 @@
     <ul class="text-white">
       <exercise-list-item
         *ngFor="let exercise of exercises"
-        [exerciseName]="exercise.exerciseName"
-        [(isCustom)]="exercise.isCustom"
+        [exercise]="exercise"
       ></exercise-list-item>
     </ul>
   </ng-template>

@@ -1,0 +1,5 @@
+[
+    {"exerciseName": "Push Up", "isCustom": false},
+    {"exerciseName": "Pull Up", "isCustom": false},
+    {"exerciseName": "Chin Up", "isCustom": true}
+]
