@@ -11,6 +11,7 @@ import { AddExerciseFormComponent } from './add-exercise-form/add-exercise-form.
 import { ExerciseFilterComponent } from './exercise-filter/exercise-filter.component';
 import { EventService } from './../shared/services/EventService';
 import { ExerciseService } from './exercise.service';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { ExerciseService } from './exercise.service';
   imports: [
     RouterOutlet, CommonModule, FormsModule,
     ExerciseListComponent, AddExerciseFormComponent,
-    ExerciseFilterComponent, HttpClientModule
+    ExerciseFilterComponent, HttpClientModule,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
