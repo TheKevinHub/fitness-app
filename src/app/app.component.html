@@ -53,10 +53,10 @@
 
 </div>
 
-
-
 <div class="grid gap-10 mt-10 border-x-2 border-green-500 rounded-3xl p-2">
   <div class="bg-gradient-to-r from-red-700 to-red-950 border-2 border-green-500 rounded-full mx-16 p-1 hover:bg-green-500 active:scale-90">
+    <a routerLink="filter" class="flex justify-center text-white text-center text-xl">Today's Workout</a>
+    <a href="#" (click)="$event.preventDefault(); goToContact()" class="flex justify-center text-white text-center text-xl">Today's Workout</a>
     <div class="text-white text-center text-xl">Today's Workout</div>
   </div>
 
@@ -91,6 +91,8 @@
   <exercise-list
     [exercises]="items.filter(filter)"
   ></exercise-list>
-</div>   -->
+</div> -->
 
-<app-contact></app-contact>
+<!-- <app-contact></app-contact> -->
+
+<router-outlet></router-outlet>

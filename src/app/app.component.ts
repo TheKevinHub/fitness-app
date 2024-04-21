@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { timer } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +20,7 @@ import { ContactComponent } from './contact/contact.component';
     RouterOutlet, CommonModule, FormsModule,
     ExerciseListComponent, AddExerciseFormComponent,
     ExerciseFilterComponent, HttpClientModule,
-    ContactComponent,
+    ContactComponent, RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -41,9 +41,6 @@ export class AppComponent implements OnInit {
         this.items = data;
       },
 
-      (error : any) => {
-        alert(error.message);
-      }
     );
   }
 
@@ -53,7 +50,7 @@ export class AppComponent implements OnInit {
 
   items : ExerciseItem[] = [];
 
-  constructor(events: EventService, private exerciseService : ExerciseService) {
+  constructor(events: EventService, private exerciseService : ExerciseService, private router: Router) {
     events.listen('removeExercise', (exercise : any) => {
       // todo remove exercise from items
       let index = this.items.indexOf(exercise);
@@ -64,19 +61,8 @@ export class AppComponent implements OnInit {
   }
 
   filter: any;
+
+  goToContact() {
+    this.router.navigate(['contact']);
+  }
 }
-
-
-// import { Observable, timer } from 'rxjs';
-// import { map } from 'rxjs/operators';
-
-// dateTime: Observable<Date>
-
-// ngOnInit() {
-//   this.dateTime = timer(0, 1000).pipe (
-//     map(() => {
-//       return new Date()
-//     })
-//   )
-// }
-// Add | async

@@ -14,7 +14,7 @@ export class AddExerciseFormComponent {
   newExerciseName = '';
 
   addNewExercise() {
-    this.addExercise.emit(new ExerciseItem(this.newExerciseName, true))
+    this.addExercise.emit(new ExerciseItem(undefined, this.newExerciseName, true))
     this.newExerciseName = '';
   }
 

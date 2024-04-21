@@ -1,12 +1,25 @@
-<div *ngIf="exercises.length == 0; else showExercises" class="text-white">
+<!-- <div *ngIf="exercises.length == 0; else showExercises" class="text-white">
     No exercises to display.
-  </div>
+</div>
   
-  <ng-template #showExercises>
-    <ul class="text-white">
-      <exercise-list-item
-        *ngFor="let exercise of exercises"
-        [exercise]="exercise"
-      ></exercise-list-item>
-    </ul>
-  </ng-template>
+<ng-template #showExercises>
+  <ul class="text-white">
+    <exercise-list-item
+      *ngFor="let exercise of exercises"
+      [exercise]="exercise"
+    ></exercise-list-item>
+  </ul>
+</ng-template> -->
+
+<div class="container">
+  <div
+    class="row text-white"
+    *ngFor="let exercise of exercises"
+  >
+    <h1>
+      <a [routerLink]="['/exercises', exercise.id]">
+        {{exercise.exerciseName}}
+      </a>
+    </h1>
+  </div>
+</div>

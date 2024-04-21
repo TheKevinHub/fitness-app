@@ -1,5 +1,5 @@
 export class ExerciseItem {
-    constructor(public exerciseName : string, public isCustom : boolean = false) {
+    constructor(public id : number | undefined, public exerciseName : string, public isCustom : boolean = false) {
 
     }
 }

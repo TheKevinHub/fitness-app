@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams, HttpRequest, HttpResponse } from '@angular/common/http';
 import { ExerciseItem } from '../shared/models/exerciseItem';
 import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { Observable, map, throwError } from 'rxjs';
+import { ExerciseDetailsComponent } from './exercise-details/exercise-details.component';
 
 @Injectable({
   providedIn: 'root'
@@ -12,23 +13,13 @@ export class ExerciseService {
   constructor(private http: HttpClient) { }
 
   private getStandardOptions() : any {
-    return {
-      headers: new HttpHeaders({
+      return new HttpHeaders({
         'Content-Type': 'application/json',
-      })
-    };
+      });
   }
 
-  getExercises() {
-    let options = this.getStandardOptions();
-
-    options.params = new HttpParams({
-      fromObject: {
-        format: 'json'
-      }
-    });
-
-    return this.http.get('assets/exercises.json', options).pipe(catchError(this.handleError));
+  getExercises() : Observable<ExerciseItem[]> {
+    return this.http.get<ExerciseItem[]>('assets/exercises.json', {observe: 'body', headers: this.getStandardOptions()}).pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -46,5 +37,11 @@ export class ExerciseService {
 
     options.headers = options.headers.set('Authorization', 'value-need-for-authorization');
     this.http.post('assets/exercises.json', exercise, options);
+  }
+  
+  getExerciseDetails(id: number) {
+      return this.getExercises().pipe(map(exerciseList => {
+      return exerciseList.find(p => p.id == id)
+    }));
   }
 }
