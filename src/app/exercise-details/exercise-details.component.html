@@ -1,5 +1,66 @@
-<div class="container">
-    <div class="row">
-        <h1 class="text-white">{{exercise?.exerciseName}}</h1>
+<div class="border-b-2 border-green-500">
+    <div class="grid grid-rows-1 grid-flow-col">
+        <a routerLink=".." class="text-md text-white text-sm flex pt-2 pl-2 flex justify-start">
+            <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:scale-90">Back</div>
+        </a>
+        <a routerLink=".." class="text-md text-white text-sm flex pt-2 pl-2 flex justify-end">
+            <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:scale-90">Add</div>
+        </a>
+    </div>
+
+    <div class="border-x-4 border-red-800 rounded-lg mx-20 p-2 my-4">
+        <div class="text-2xl tracking-wider text-white italic flex justify-center">{{exercise?.exerciseName}}</div>
+    </div>
+</div>
+
+<div class="text-gray-300 bg-red-700/40 p-2 mt-4 rounded-lg">
+    <div class="">
+        <div class="font-bold">Target Muscle:</div>
+        <div class="ml-4 text-sm">Sternal (lower) Pectoralis Major</div>
+    </div>
+
+    <div class="pt-4">
+        <div class="font-bold">Synergists:</div>
+        <div class="ml-4 text-sm">Clavicular (upper) Pectoralis Major, Anterior Deltoid, Triceps Brachii</div>
+    </div>
+
+    <div class="pt-4">
+        <div class="font-bold flex justify-start">Force:<div class="font-normal ml-4">Push</div></div>
+    </div>
+</div>
+
+<div class="text-gray-300 bg-red-700/40 p-2 mt-4 rounded-lg">
+    <div class="font-bold">Description</div>
+    <div class="ml-2 text-sm indent-5 tracking-wide">
+        A conditioning exercise performed in a prone position by raising and lowering 
+        the body with the straightening and bending of the arms while keeping the back
+        straight and supporting the body on the hands and toes.
+    </div>
+</div>
+
+<div class="text-gray-300 bg-red-700/40 p-2 mt-4 rounded-lg">
+    <div class="font-bold">Execution</div>
+    <ol class="list-decimal list-outside ml-4 text-sm">
+        <li>Get on your hands and knees, with your arms positioned a little wider than shoulder width.</li>
+        <li class="mt-1.5">Extend your feet backwards and straighten your body.</li>
+        <li class="mt-1.5">Keeping your body straight and elbows slightly tucked in, inhale as you lower your chest to the floor by bending your elbows.</li>
+        <li class="mt-1.5">Exhale as you reverse the motion and push your body back up to the starting position.</li>
+        <li class="mt-1.5">Repeat.</li>
+    </ol>
+</div>
+
+<div class="text-gray-300 bg-red-700/40 p-2 mt-4 rounded-lg">
+    <div class="font-bold">Comments</div>
+    <div class="ml-2 text-sm indent-5 tracking-wide">
+        Keeping your elbows slightly tucked into your body reduces the pressure on your joints. 
+        For beginners, look up the knee push-up or the incline push-up variations.
+        You can wear a weighted vest or have someone place a weighted plate on your back for a more difficult version.
+    </div>
+</div>
+
+<div class="text-gray-300 bg-red-700/40 p-2 mt-4 rounded-lg">
+    <div class="font-bold text-sm">Variations</div>
+    <div class="text-sm text-center">
+        Knee Push-Up | Incline Push-Up | Decline Push-Up | Diamond Push-Up | Close-Grip Push-Up
     </div>
 </div>

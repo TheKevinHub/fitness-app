@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { timer } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,6 +11,7 @@ import { ExerciseFilterComponent } from './exercise-filter/exercise-filter.compo
 import { EventService } from './../shared/services/EventService';
 import { ExerciseService } from './exercise.service';
 import { ContactComponent } from './contact/contact.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,7 @@ import { ContactComponent } from './contact/contact.component';
     RouterOutlet, CommonModule, FormsModule,
     ExerciseListComponent, AddExerciseFormComponent,
     ExerciseFilterComponent, HttpClientModule,
-    ContactComponent, RouterModule
+    ContactComponent, RouterModule, HomePageComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -29,18 +29,11 @@ import { ContactComponent } from './contact/contact.component';
 export class AppComponent implements OnInit {
   title = 'fitness-app';
 
-  dateTime!: Date
-
   ngOnInit(): void {
-    timer(0, 1000).subscribe(() => {
-      this.dateTime = new Date()
-    })
-
     this.exerciseService.getExercises().subscribe(
       (data : any) => {
         this.items = data;
       },
-
     );
   }
 
@@ -61,8 +54,4 @@ export class AppComponent implements OnInit {
   }
 
   filter: any;
-
-  goToContact() {
-    this.router.navigate(['contact']);
-  }
 }

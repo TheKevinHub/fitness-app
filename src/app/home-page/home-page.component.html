@@ -1,0 +1,108 @@
+<div class="text-white text-center italic font-bold text-2xl my-6">Fitness App</div>
+    
+<div class="border-t-2 border-green-500">
+    <div class="p-4">
+        <div class="border-x-2 border-green-500 rounded-lg">
+            <div class="text-white italic font-bold text-md flex tracking-wider justify-center mt-4">{{ dateTime | date:'EEEE' }}</div>
+            <div class="text-white italic font-bold text-lg flex tracking-wider justify-center mb-4">{{ dateTime | date:'longDate' }}</div>
+        </div>
+    </div>
+
+    <div class="text-white flex justify-center items-center">
+        <!-- <img class="h-10 w-10 rounded-full" src="" alt=""/> -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+    </div>
+</div>
+
+<div class="m-2 text-white font-bold text-lg">Summary</div>
+
+<div class="text-white p-2 bg-gradient-to-br from-red-800 to-red-950 border-2 border-green-500 rounded-2xl">
+
+    <div class="border border-green-500 rounded-2xl p-2">
+        <div class="grid grid-cols-4 my-2 gap-10">
+            <div class="col-span-2 grid grid-cols-3">
+            <div class="col-span-2 text-right flex justify-center items-center">Cal Intake:</div>
+            <div class="col-span-1 flex justify-center items-center">0cal</div>
+            </div>
+            <div class="col-span-2 grid grid-cols-3">
+            <div class="col-span-2 text-right flex justify-center items-center">Cals Burned:</div>
+            <div class="col-span-1 flex justify-center items-center">0cal</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 my-2 gap-10">
+            <div class="col-span-2 grid grid-cols-3">
+            <div class="col-span-2 text-right flex justify-center items-center">Weight:</div>
+            <div class="col-span-1 leading-8">140lbs</div>
+            </div>
+            <div class="col-span-2 grid grid-cols-3">
+            <div class="col-span-2 text-right flex justify-center items-center">Weight Goal:</div>
+            <div class="col-span-1 flex justify-center items-center">130lbs</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 my-2 gap-10">
+            <div class="col-span-2 grid grid-cols-3">
+            <div class="col-span-2 text-right flex justify-center items-center">Height:</div>
+            <div class="col-span-1 flex justify-center items-center">5'5ft</div>
+            </div>
+            <div class="col-span-2 grid grid-cols-3 gap-2">
+            <div class="col-span-2 text-right flex justify-center items-center">BMI:</div>
+            <div class="col-span-1 flex justify-center items-center">23.3</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 my-2 gap-10">
+            <div class="col-span-2 grid grid-cols-3">
+            <div class="col-span-2 text-right flex justify-center items-center">Today Done:</div>
+            <div class="col-span-1 flex justify-center items-center">NO</div>
+            </div>
+            <div class="col-span-2 grid grid-cols-3 gap-2">
+            <div class="col-span-2 text-right flex justify-center items-center"></div>
+            <div class="col-span-1 flex justify-center items-center"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-white text-sm flex justify-end my-4">
+        <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:scale-90">Edit</div>
+    </div>
+
+</div>
+
+
+
+<!-- Home Page Buttons -->
+<div class="grid gap-10 mt-10 p-2 border-x-2 border-green-500 rounded-lg">
+
+    <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
+        <a href="#" (click)="$event.preventDefault(); goToWorkout()"
+            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
+            Today's Workout
+        </a>
+    </div>
+
+    <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
+        <a routerLink="exercises"
+            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
+            Exercises Catalogue
+        </a>
+    </div>
+
+    <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
+        <a routerLink="muscles"
+            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
+            Muscle Group View
+        </a>
+    </div>
+
+    <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
+        <a routerLink="routines"
+            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
+            Routines
+        </a>
+    </div>
+
+</div>

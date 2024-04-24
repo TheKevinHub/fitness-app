@@ -6,7 +6,7 @@ import { createInvalidDomainValidator } from './customValidator';
 const customValidator = createInvalidDomainValidator(['gmail.com', 'yahoo.com', 'hotmail.com']);
 
 @Component({
-  selector: 'app-contact',
+  selector: 'contact',
   standalone: true,
   imports: [
     CommonModule,
@@ -16,8 +16,6 @@ const customValidator = createInvalidDomainValidator(['gmail.com', 'yahoo.com', 
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-
-
 
   contactForm = new FormGroup({
     senderName: new FormControl('', Validators.required),
@@ -31,6 +29,5 @@ export class ContactComponent {
     //   alert('You changed the name field.');
     // }
   }
-
 
 }

@@ -11,9 +11,20 @@
   </ul>
 </ng-template> -->
 
-<div class="container">
+<div class="mb-4">
+  <div class="grid grid-rows-1 grid-flow-col">
+    <a routerLink=".." class="text-md text-white text-sm flex pt-2 pl-2 flex justify-start">
+        <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:scale-90">Back</div>
+    </a>
+    <a routerLink=".." class="text-md text-white text-sm flex pt-2 pl-2 flex justify-end">
+        <div class="border-2 border-green-500 bg-red-800 rounded-full px-4 py-1 active:scale-90">Add</div>
+    </a>
+  </div>
+</div>
+
+<div class="border-y-4 rounded-xl border-green-500">
   <div
-    class="row text-white"
+    class="flex justify-center text-xl border-2 border-green-500 rounded-xl m-4 p-2 text-white bg-red-800"
     *ngFor="let exercise of exercises"
   >
     <h1>

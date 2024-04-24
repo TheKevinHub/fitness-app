@@ -1,6 +1,6 @@
 [
-    {"id": 1, "exerciseName": "Push Up", "isCustom": false},
-    {"id": 2, "exerciseName": "Pull Up", "isCustom": false},
+    {"id": 1, "exerciseName": "Push-Up", "isCustom": false},
+    {"id": 2, "exerciseName": "Pull-Up", "isCustom": false},
     {"id": 3, "exerciseName": "Chin Up", "isCustom": false},
     {"id": "4", "exerciseName": "Bench Press", "isCustom": false},
     {"id": "5", "exerciseName": "Larsen Press", "isCustom": false},
@@ -16,6 +16,6 @@
     {"id": "15", "exerciseName": "Bent-Over Cable Fly", "isCustom": false},
     {"id": "16", "exerciseName": "Lateral Raise", "isCustom": false},
     {"id": "17", "exerciseName": "Plate Front Raise", "isCustom": false},
-    {"id": "18", "exerciseName": "Diamond Push Up", "isCustom": false},
+    {"id": "18", "exerciseName": "Diamond Push-Up", "isCustom": false},
     {"id": "19", "exerciseName": "Dumbbell Press", "isCustom": false}
 ]

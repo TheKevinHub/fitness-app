@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { ExerciseService } from '../exercise.service';
 import { ExerciseItem } from '../../shared/models/exerciseItem';
 
 @Component({
   selector: 'app-exercise-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './exercise-details.component.html',
   styleUrl: './exercise-details.component.css'
 })
