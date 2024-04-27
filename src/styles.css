@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
-    background-color: black;
+    background-color: rgb(5, 5, 5);
     padding: 10px;
+    background-image: url("assets/Fitness_Background_M.png");
+    background-size: cover;
 }

@@ -23,14 +23,11 @@
 </div>
 
 <div class="border-y-4 rounded-xl border-green-500">
-  <div
-    class="flex justify-center text-xl border-2 border-green-500 rounded-xl m-4 p-2 text-white bg-red-800"
-    *ngFor="let exercise of exercises"
-  >
-    <h1>
-      <a [routerLink]="['/exercises', exercise.id]">
+  <div *ngFor="let exercise of exercises">
+    <a [routerLink]="['/exercises', exercise.id]">
+      <div class="flex justify-center text-xl border-2 border-green-500 rounded-xl m-4 p-2 mx-8 text-white bg-red-800">
         {{exercise.exerciseName}}
-      </a>
-    </h1>
+      </div>
+    </a>
   </div>
 </div>

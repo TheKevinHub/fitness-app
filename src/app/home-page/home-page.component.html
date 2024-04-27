@@ -20,48 +20,40 @@
 
 <div class="text-white p-2 bg-gradient-to-br from-red-800 to-red-950 border-2 border-green-500 rounded-2xl">
 
-    <div class="border border-green-500 rounded-2xl p-2">
-        <div class="grid grid-cols-4 my-2 gap-10">
-            <div class="col-span-2 grid grid-cols-3">
-            <div class="col-span-2 text-right flex justify-center items-center">Cal Intake:</div>
-            <div class="col-span-1 flex justify-center items-center">0cal</div>
+    <div class="border border-green-500 rounded-2xl p-2 flex flex-col gap-4">
+        <div class="flex flex-row justify-between">
+            <div class="font-bold text-right flex">Cal Intake:
+                <div class="font-normal ml-4">0cal</div>
             </div>
-            <div class="col-span-2 grid grid-cols-3">
-            <div class="col-span-2 text-right flex justify-center items-center">Cals Burned:</div>
-            <div class="col-span-1 flex justify-center items-center">0cal</div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-4 my-2 gap-10">
-            <div class="col-span-2 grid grid-cols-3">
-            <div class="col-span-2 text-right flex justify-center items-center">Weight:</div>
-            <div class="col-span-1 leading-8">140lbs</div>
-            </div>
-            <div class="col-span-2 grid grid-cols-3">
-            <div class="col-span-2 text-right flex justify-center items-center">Weight Goal:</div>
-            <div class="col-span-1 flex justify-center items-center">130lbs</div>
+            
+            <div class="font-bold text-right flex">Cal Burned:
+                <div class="font-normal ml-4">0cal</div>
             </div>
         </div>
 
-        <div class="grid grid-cols-4 my-2 gap-10">
-            <div class="col-span-2 grid grid-cols-3">
-            <div class="col-span-2 text-right flex justify-center items-center">Height:</div>
-            <div class="col-span-1 flex justify-center items-center">5'5ft</div>
+        <div class="flex flex-row justify-between">
+            <div class="font-bold text-right flex">Weight:
+                <div class="font-normal ml-4">140lbs</div>
             </div>
-            <div class="col-span-2 grid grid-cols-3 gap-2">
-            <div class="col-span-2 text-right flex justify-center items-center">BMI:</div>
-            <div class="col-span-1 flex justify-center items-center">23.3</div>
+            
+            <div class="font-bold text-right flex">Weight Goal:
+                <div class="font-normal ml-4">130lbs</div>
             </div>
         </div>
 
-        <div class="grid grid-cols-4 my-2 gap-10">
-            <div class="col-span-2 grid grid-cols-3">
-            <div class="col-span-2 text-right flex justify-center items-center">Today Done:</div>
-            <div class="col-span-1 flex justify-center items-center">NO</div>
+        <div class="flex flex-row justify-between">
+            <div class="font-bold text-right flex">Height:
+                <div class="font-normal ml-4">5'5ft</div>
             </div>
-            <div class="col-span-2 grid grid-cols-3 gap-2">
-            <div class="col-span-2 text-right flex justify-center items-center"></div>
-            <div class="col-span-1 flex justify-center items-center"></div>
+            
+            <div class="font-bold text-right flex">BMI:
+                <div class="font-normal ml-4">23.3</div>
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-between">
+            <div class="font-bold text-right flex">Today Done:
+                <ng-icon name="ionClose" class="font-normal text-2xl ml-2 mt-[1.5px]"></ng-icon>
             </div>
         </div>
     </div>
@@ -75,34 +67,56 @@
 
 
 <!-- Home Page Buttons -->
-<div class="grid gap-10 mt-10 p-2 border-x-2 border-green-500 rounded-lg">
+<div class="grid gap-6 mt-10 p-2">
 
     <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
         <a href="#" (click)="$event.preventDefault(); goToWorkout()"
-            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
+            class="text-white text-center text-lg bg-red-800 rounded-full flex justify-evenly items-center p-1.5">
+            <ng-icon name="ionBarbellOutline" class="text-black mr-1 text-2xl"></ng-icon>
             Today's Workout
+            <ng-icon name="ionBarbellOutline" class="text-black ml-1 text-2xl"></ng-icon>
         </a>
     </div>
 
     <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
         <a routerLink="exercises"
-            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
-            Exercises Catalogue
+            class="text-white text-center text-lg bg-red-800 rounded-full flex justify-evenly items-center p-1.5">
+            <ng-icon name="ionBookOutline" class="text-black mr-1"></ng-icon>
+            Exercise Archive
+            <ng-icon name="ionBookOutline" class="text-black ml-1"></ng-icon>
         </a>
     </div>
 
     <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
         <a routerLink="muscles"
-            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
-            Muscle Group View
+            class="text-white text-center text-lg bg-red-800 rounded-full flex justify-evenly items-center p-1.5">
+            <ng-icon name="ionBody" class="text-black mr-1"></ng-icon>
+            Muscle View
+            <ng-icon name="ionBody" class="text-black ml-1"></ng-icon>
         </a>
     </div>
 
     <div class="border-x-4 border-green-500 rounded-full mx-16 p-2 active:scale-90">
         <a routerLink="routines"
-            class="text-white text-center text-xl bg-red-800 rounded-full flex justify-center">
+            class="text-white text-center text-lg bg-red-800 rounded-full flex justify-evenly items-center p-1.5">
+            <ng-icon name="ionTimerOutline" class="text-black mr-1 text-2xl"></ng-icon>
             Routines
+            <ng-icon name="ionTimerOutline" class="text-black ml-1 text-2xl"></ng-icon>
         </a>
     </div>
 
 </div>
+
+
+
+<!-- ALTERNATE VERSION OF THE SUMMARY -->
+<!-- <div class="grid grid-cols-4 my-2 gap-10">
+    <div class="col-span-2 grid grid-cols-3">
+    <div class="col-span-2 text-right flex justify-center items-center">Weight:</div>
+    <div class="col-span-1 leading-8">140lbs</div>
+    </div>
+    <div class="col-span-2 grid grid-cols-3">
+    <div class="col-span-2 text-right flex justify-center items-center">Weight Goal:</div>
+    <div class="col-span-1 flex justify-center items-center">130lbs</div>
+    </div>
+</div> -->
