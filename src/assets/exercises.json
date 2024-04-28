@@ -1,7 +1,7 @@
 [
-    {"id": 1, "exerciseName": "Push-Up", "isCustom": false},
-    {"id": 2, "exerciseName": "Pull-Up", "isCustom": false},
-    {"id": 3, "exerciseName": "Chin Up", "isCustom": false},
+    {"id": "1", "exerciseName": "Push-Up", "isCustom": false},
+    {"id": "2", "exerciseName": "Pull-Up", "isCustom": false},
+    {"id": "3", "exerciseName": "Chin Up", "isCustom": false},
     {"id": "4", "exerciseName": "Bench Press", "isCustom": false},
     {"id": "5", "exerciseName": "Larsen Press", "isCustom": false},
     {"id": "6", "exerciseName": "Standing Arnold Press", "isCustom": false},
